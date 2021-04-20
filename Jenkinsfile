@@ -10,7 +10,7 @@ pipeline{
 			}
 			post{
 				success{
-					slackSend(color:"#00FF00",message:"success")
+					slackSend(color:"#00FF00",message:"building image success")
 				}
 			}
 		}
@@ -26,7 +26,7 @@ pipeline{
 		 	}
 			post{
 				success{
-					slackSend(color:"#00FF00",message:"success")
+					slackSend(color:"#00FF00",message:"successfully pushing the image")
 				}
 			}
 		}
@@ -42,7 +42,7 @@ pipeline{
 			}
 			post{
 				success{
-					slackSend(color:"#00FF00",message:"success")
+					slackSend(color:"#00FF00",message:"successful deploy")
 				}
 			}
 		}

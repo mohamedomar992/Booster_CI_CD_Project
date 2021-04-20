@@ -6,7 +6,7 @@ docker login --username=$DOCKER_USERNAME --password=$DOCKER_PASSWORD
 
 # Step 1:
 # Create dockerpath
- dockerpath=mohamed992/myapp
+dockerpath=mohamed992/django_server:v1
 docker tag myapp $dockerpath
 # Step 2:  
 # Authenticate & tag
