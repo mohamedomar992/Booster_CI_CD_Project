@@ -6,7 +6,7 @@ pipeline{
 			steps
 			{
 				sh 'docker build -t django_server:v1 .'
-				// sh 'docker image ls'
+				sh 'docker image ls'
 			success{
 				slackSend(color:"#00FF00",message:"success")
 			}
