@@ -22,3 +22,4 @@ EXPOSE 8000
 
 RUN python3.6 manage.py makemigrations &&\
 	python3.6 manage.py migrate
+CMD ["./runserver.sh"]
