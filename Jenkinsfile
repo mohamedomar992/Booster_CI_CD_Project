@@ -5,12 +5,12 @@ pipeline{
 		{
 			steps
 			{
-				sh 'docker build -t django_server:v1 .'
+				sh 'docker build -t django_server:test .'
 				sh 'docker image ls'
 			}
 			post{
 				success{
-					slackSend(color:"#00FF00",message:"building image success")
+					sh echo 'docker success'
 				}
 			}
 		}
@@ -26,7 +26,7 @@ pipeline{
 		 	}
 			post{
 				success{
-					slackSend(color:"#00FF00",message:"successfully pushing the image")
+					sh echo 'upload success'
 				}
 			}
 		}
@@ -42,7 +42,7 @@ pipeline{
 			}
 			post{
 				success{
-					slackSend(color:"#00FF00",message:"successful deploy")
+					sh echo 'deploy success'
 				}
 			}
 		}
